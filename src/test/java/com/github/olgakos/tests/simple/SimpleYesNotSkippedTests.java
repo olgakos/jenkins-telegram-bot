@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @DisplayName("It's 3 Simple Yes-Not-Skipped Tests")
 public class SimpleYesNotSkippedTests {
 
+
     @Test
     @Tag("Positive Test One (Tag)")
     @DisplayName("Positive Test One")

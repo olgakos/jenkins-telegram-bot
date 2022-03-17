@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 @Tag("properties")
 public class SistemPropertiesTests {
 
+
     @Test
     void someTest1() {
         String browser = System.getProperty("browser");
