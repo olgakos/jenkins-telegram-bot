@@ -1,8 +1,10 @@
 package com.github.olgakos.tests.properties;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Disabled("Skipped Tests: !!!!")
 @Tag("properties")
 public class SistemPropertiesTests {
 

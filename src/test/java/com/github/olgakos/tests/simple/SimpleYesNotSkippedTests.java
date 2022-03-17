@@ -19,6 +19,7 @@ public class SimpleYesNotSkippedTests {
     }
 
     @Test
+    @Disabled("Skipped Test: With some reason")
     @DisplayName("False Test: With some reason")
     void test01() {
         assertTrue(false);
@@ -27,6 +28,13 @@ public class SimpleYesNotSkippedTests {
     @Test
     @Disabled("Skipped Test: With some reason")
     void test02() {
+        assertTrue(true);
+    }
+
+    @Test
+    @Tag("Positive Test Two (Tag)")
+    @DisplayName("Positive Test Two")
+    void test03() {
         assertTrue(true);
     }
 }

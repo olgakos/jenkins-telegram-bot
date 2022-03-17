@@ -2,13 +2,13 @@
   "app": {
     "bot": {
       "token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI",
-      "chat": "-515207049",
+      "chat": "-515207049", //Мой чат-айди
       "replyTo": ""
     },
     "base": {
       "lang": "en",
       "messenger": "telegram",
-      "allureFolder": "allure-report/",
+      "allureFolder": "build/allure-report/", //!!!!
       "allureLinkPath": "allure",
       "chart": true,
       "chartName": "",
