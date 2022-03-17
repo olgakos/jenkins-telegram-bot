@@ -60,12 +60,6 @@ tasks.withType(Test) {
         }
     }
 
-
-    task properties_test(type: Test) {
-        useJUnitPlatform {
-            includeTags "properties"
-        }
-
     }
 
     task smoke_test(type: Test) {
@@ -79,6 +73,12 @@ tasks.withType(Test) {
             systemProperty "junit.jupiter.extensions.autodetection.enabled", "true"
         }
 
+        /*
+        task properties_test(type: Test) {
+            useJUnitPlatform {
+                includeTags "properties"
+            }
+        */
 
         /*
         Use this token to access the HTTP API:
@@ -94,9 +94,8 @@ tasks.withType(Test) {
          // Ola Command in many lines (\ as separator)
          curl -X POST \
          -H 'Content-Type: application/json' \
-         -d '{"chat_id": "-515207049", "text": "This is Olga’s a test from qa.guru"}' \
+         -d '{"chat_id": "-515207049", "text": "This is Olga’s test from qa.guru"}' \
          https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/getUpdates
 
         */
     }
-}
