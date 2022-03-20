@@ -39,7 +39,7 @@ dependencies {
             "org.junit.jupiter:junit-jupiter-api:$junitVersion") //NB, переменная //Logging
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:$slf4jVersion", //NB, переменная
-            "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion") //NB, переменная
 }
 
 //fix: кириллица
@@ -47,8 +47,9 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+
 tasks.withType(Test) {
-    systemProperties(System.getProperties())
+    systemProperties(System.getProperties()) //?
     useJUnitPlatform()
 
 
@@ -60,8 +61,10 @@ tasks.withType(Test) {
         }
     }
 
+
     }
 
+//???
     task smoke_test(type: Test) {
         useJUnitPlatform {
             includeTags "smoke"

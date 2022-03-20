@@ -1,7 +1,7 @@
 {
   "app": {
     "bot": {
-      "token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI",
+      "token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI", //мой токен
       "chat": "-515207049", //Мой чат-айди
       "replyTo": ""
     },
