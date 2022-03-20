@@ -2,19 +2,16 @@
 BOT_TOKEN 5266020589:AAFfjmkxZuxYCUyQLoDHaNO4MxGn0uGg4jc
 CHAT_ID -1001627830931
 
-//(var2)
+//(var2 МОИ ДАННЫЕ)
 BOT_TOKEN 5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI
-CHAT_ID -515207049
+CHAT_ID -515207049,
 
-
-// Command in many lines (\ as separator) (var2)
+// Command in many lines (\ as separator)
 curl -X POST \
      -H 'Content-Type: application/json' \
      -d '{"chat_id": "-515207049", "text": "This is a test from Olga Kos!"}' \
      https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
 
 
-// Command in one line (var1)
-curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-515207049", "text": "This is a test from qa.guru"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
-
-curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "515207049", "text": "This is a test from qa.guru"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
+// Command in one line
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-515207049", "text": "This is a test from Olga Kos!"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage

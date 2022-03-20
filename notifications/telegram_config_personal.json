@@ -2,13 +2,13 @@
   "app": {
     "bot": {
       "token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI",
-      "chat": "515207049",
+      "chat": "-515207049", //NB: "-"
       "replyTo": ""
     },
     "base": {
       "lang": "en",
       "messenger": "telegram",
-      "allureFolder": "allure-report/",
+      "allureFolder": "allure-report/", // без build/
       "allureLinkPath": "allure",
       "chart": true,
       "chartName": "",
