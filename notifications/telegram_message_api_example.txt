@@ -13,8 +13,6 @@ curl -X POST \
      -d '{"chat_id": "-515207049", "text": "This is a test from Olga Kos!"}' \
      https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
 
-
 // Command in one line (var1)
 curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-515207049", "text": "This is a test from qa.guru"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
-
 curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "515207049", "text": "This is a test from qa.guru"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
