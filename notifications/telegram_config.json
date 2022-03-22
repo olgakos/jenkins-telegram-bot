@@ -1,14 +1,15 @@
+
 {
   "app": {
     "bot": {
-      "token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI", //мой токен
-      "chat": "-692251490", //Мой чат-айди ГРУППЫ
+      "token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI",
+      "chat": "-692251490",
       "replyTo": ""
     },
     "base": {
       "lang": "en",
       "messenger": "telegram",
-      "allureFolder": "allure-report/", // НЕ верно исходный: "build/allure-report/"
+      "allureFolder": "build/allure-report/",
       "allureLinkPath": "allure",
       "chart": true,
       "chartName": "",

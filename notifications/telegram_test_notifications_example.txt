@@ -34,3 +34,8 @@ java \
 
 // Jenkins in one line
 java "-DprojectName=${PROJECT_NAME}" "-Denv=${ENVIRONMENT}" "-DreportLink=${BUILD_URL}" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
+
+===============================
+//"token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI", //мой токен
+//"chat": "-692251490", //Мой чат-айди ГРУППЫ
+//"allureFolder": "allure-report/", // НЕ верно исходный: "build/allure-report/"
