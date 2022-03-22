@@ -5,8 +5,17 @@ java \
 "-Denv=${ENVIRONMENT}" \
 "-DreportLink=${BUILD_URL}" \
 "-Dcomm=Any comment here" \
-"-Dconfig.file=${PATH_TO_FILE}" \
+"-Dconfig.file=${PATH_TO_FILE}" \ //?????
 -jar allure-notifications-3.1.2.jar
+
+
+java \
+"-DprojectName=Local test run" \
+"-Denv=${ENVIRONMENT}" \
+"-DreportLink=${BUILD_URL}" \
+"-Dcomm=Any comment here" \
+"-Dconfig.file=notifications/telegram_config.json" \ //?????
+-jar notifications/allure-notifications-3.1.2.jar
 
 
 //NB! не понимаю откуда PROD
@@ -15,15 +24,6 @@ java \
 
 // Local in multiple lines
 //NB!
-
-java \
-"-DprojectName=Local test run" \
-"-Denv=${ENVIRONMENT}" \
-"-DreportLink=${BUILD_URL}" \
-"-Dcomm=Any comment here" \
-"-Dconfig.file=notifications/telegram_config.json" \
--jar notifications/allure-notifications-3.1.2.jar
-
 
 // Jenkins
 java \

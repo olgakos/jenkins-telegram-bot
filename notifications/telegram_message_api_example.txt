@@ -7,7 +7,7 @@ BOT_TOKEN 5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI
 CHAT_ID -692251490
 
 
-//NB!: у меня в ТЕРМИНАЛЕ работает только вараинт №2, в ОДНУ СТРОКУ
+//NB!: в ТЕРМИНАЛЕ работает только вараинт №2, в ОДНУ СТРОКУ:
 
 1)
 // Command in many lines (\ as separator)
