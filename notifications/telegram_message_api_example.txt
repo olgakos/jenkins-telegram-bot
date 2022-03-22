@@ -11,10 +11,16 @@ CHAT_ID -692251490
 
 1)
 // Command in many lines (\ as separator)
+
 curl -X POST \
      -H 'Content-Type: application/json' \
-     -d '{"chat_id": "-692251490", "text": "This is a test from Olga Kos! (in Terminal in many lines)!"}' \
+     -d '{"chat_id": "-692251490", "text": "This is a test from Olga Kos! in Terminal in many lines!"}' \
      https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
 2)
 // Command in one line
-curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-692251490", "text": "This is a test from Olga Kos (in Terminal line)!"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-692251490", "text": "This is a test from Olga Kos in Terminal line!"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
+
+3)
+//бот пишет сам В себя (лучше не применять, используй группу!)
+//curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "515207049", "text": "BOT to BOT in Terminal line"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
+

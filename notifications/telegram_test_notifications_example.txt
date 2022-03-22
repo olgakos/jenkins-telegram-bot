@@ -1,35 +1,36 @@
 // Template
-
 java \
 "-DprojectName=${PROJECT_NAME}" \
 "-Denv=${ENVIRONMENT}" \
 "-DreportLink=${BUILD_URL}" \
 "-Dcomm=Any comment here" \
-"-Dconfig.file=${PATH_TO_FILE}" \ //?????
--jar allure-notifications-3.1.2.jar
+"-Dconfig.file=${PATH_TO_FILE}" \ //база из примера
+-jar allure-notifications-3.1.2.jar //база из примера
 
-
-java \
-"-DprojectName=Local test run" \
-"-Denv=${ENVIRONMENT}" \
-"-DreportLink=${BUILD_URL}" \
-"-Dcomm=Any comment here" \
-"-Dconfig.file=notifications/telegram_config.json" \ //?????
--jar notifications/allure-notifications-3.1.2.jar
-
-
-//NB! не понимаю откуда PROD
+==================================
 // Local in one line
-//java "-DprojectName=Local test run" "-Denv=PROD" "-DreportLink=qa.guru/" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
+//не понимаю откуда тут PROD
+java "-DprojectName=Local test run" "-Denv=PROD" "-DreportLink=qa.guru/" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
 
-// Local in multiple lines
-//NB!
+// Local in multiple lines (BASE)
+java \
+"-DprojectName=Local test run" \                        //это название сборки, заголовок
+"-Denv=PROD" \
+"-DreportLink=qa.guru/" \                              //это имя тестируемого сайта условно
+"-Dcomm=Any comment here" \
+"-Dconfig.file=notifications/telegram_config.json" \  //это ПУТЬ до файла конфигой Проекта
+-jar notifications/allure-notifications-3.1.2.jar     //это ПУТЬ до файла Библиотеки
 
+==============================
 // Jenkins
 java \
-"-DprojectName=${PROJECT_NAME}" \
+"-DprojectName=${PROJECT_NAME}" \                    //это название сборки, заголовок
 "-Denv=${ENVIRONMENT}" \
-"-DreportLink=${BUILD_URL}" \
+"-DreportLink=${BUILD_URL}" \             //сюда запишется ссылка на нашу сборку (#хх) в перечне собранных сборок)
 "-Dcomm=Any comment here" \
-"-Dconfig.file=notifications/telegram_config.json" \
--jar notifications/allure-notifications-3.1.2.jar
+"-Dconfig.file=notifications/telegram_config.json" \  //это ПУТЬ до файла конфигой Проекта
+-jar notifications/allure-notifications-3.1.2.jar     //это ПУТЬ до файла Библиотеки
+
+
+java "-DprojectName=${PROJECT_NAME}" "-Denv=${ENVIRONMENT}" "-DreportLink=${BUILD_URL}" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
+java "-DprojectName=${PROJECT_NAME}" "-Denv=${ENVIRONMENT}" "-DreportLink=${BUILD_URL}" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
