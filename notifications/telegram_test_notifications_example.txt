@@ -32,5 +32,5 @@ java \
 -jar notifications/allure-notifications-3.1.2.jar     //это ПУТЬ до файла Библиотеки
 
 
-java "-DprojectName=${PROJECT_NAME}" "-Denv=${ENVIRONMENT}" "-DreportLink=${BUILD_URL}" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
+// Jenkins in one line
 java "-DprojectName=${PROJECT_NAME}" "-Denv=${ENVIRONMENT}" "-DreportLink=${BUILD_URL}" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
