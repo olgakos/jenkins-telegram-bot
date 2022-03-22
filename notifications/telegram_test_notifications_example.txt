@@ -1,41 +1,51 @@
-// Template
+===============================
+"token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI", //мой токен
+"chat": "-692251490", //Мой чат-id ГРУППЫ
+"chat": "515207049",  //id от Бота (если нужно)
+
+Из конфига:
+"allureFolder": "allure-report/",              //для запуска из Дженкинса
+"allureFolder": "build/allure-report/"        // для локального запуска из Idea
+==================================
+
+// Template-шаблон
 java \
 "-DprojectName=${PROJECT_NAME}" \
 "-Denv=${ENVIRONMENT}" \
 "-DreportLink=${BUILD_URL}" \
 "-Dcomm=Any comment here" \
-"-Dconfig.file=${PATH_TO_FILE}" \ //база из примера
--jar allure-notifications-3.1.2.jar //база из примера
+"-Dconfig.file=${PATH_TO_FILE}" \    //путь к файлу с конфигурацией запуска (локального или Дженкенс)
+-jar allure-notifications-3.1.2.jar  //библиотека-запускатор
 
 ==================================
 // Local in one line
-//не понимаю откуда тут PROD
+//PROD по умолчанию
+
 java "-DprojectName=Local test run" "-Denv=PROD" "-DreportLink=qa.guru/" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
 
+==================================
 // Local in multiple lines (BASE)
+//NB! в .json-файлах не должно быть "//комментариев"
+
 java \
 "-DprojectName=Local test run" \                        //это название сборки, заголовок
 "-Denv=PROD" \
 "-DreportLink=qa.guru/" \                              //это имя тестируемого сайта условно
 "-Dcomm=Any comment here" \
-"-Dconfig.file=notifications/telegram_config.json" \  //это ПУТЬ до файла конфигой Проекта
+"-Dconfig.file=notifications/telegram_config.json" \  //это ПУТЬ до файла конфигой Проекта в Idea
 -jar notifications/allure-notifications-3.1.2.jar     //это ПУТЬ до файла Библиотеки
 
 ==============================
 // Jenkins
 java \
-"-DprojectName=${PROJECT_NAME}" \                    //это название сборки, заголовок
+"-DprojectName=${PROJECT_NAME}" \                     //это название сборки, заголовок
 "-Denv=${ENVIRONMENT}" \
-"-DreportLink=${BUILD_URL}" \             //сюда запишется ссылка на нашу сборку (#хх) в перечне собранных сборок)
-"-Dcomm=Any comment here" \
+"-DreportLink=${BUILD_URL}" \                         //сюда запишется ссылка на сборку (#хх) (из перечня выполенных сборок)
+"-Dcomm=Any comment here" \                           // комментарий
 "-Dconfig.file=notifications/telegram_config.json" \  //это ПУТЬ до файла конфигой Проекта
 -jar notifications/allure-notifications-3.1.2.jar     //это ПУТЬ до файла Библиотеки
 
-
+==================================
 // Jenkins in one line
 java "-DprojectName=${PROJECT_NAME}" "-Denv=${ENVIRONMENT}" "-DreportLink=${BUILD_URL}" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
 
-===============================
-//"token": "5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI", //мой токен
-//"chat": "-692251490", //Мой чат-айди ГРУППЫ
-//"allureFolder": "allure-report/", // НЕ верно исходный: "build/allure-report/"
