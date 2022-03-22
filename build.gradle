@@ -82,22 +82,24 @@ tasks.withType(Test) {
             }
         */
 
+
+    }
+
         /*
-        Use this token to access the HTTP API:
-        5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI
 
-       https://api.telegram.org/bot{secret_bot}/getUpdates
-      Мой:
-       https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/getUpdates
+        ===================NB!=========================
+6) наши важные переменные
+5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI
+-692251490
 
-        Чат Айди мой
-        "chat":{"id":515207049"
-
-         // Ola Command in many lines (\ as separator)
+7) вставляемв CURL шаблон
+  // Ola Command in many lines (\ as separator)
          curl -X POST \
          -H 'Content-Type: application/json' \
-         -d '{"chat_id": "-515207049", "text": "This is Olga’s test from qa.guru"}' \
+         -d '{"chat_id": "-692251490", "text": "This is Olga’s test from qa.guru"}' \
          https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/getUpdates
 
+ 8) отправлем этот шаблон в Терминал (важно, GitBush)
+
         */
-    }
+

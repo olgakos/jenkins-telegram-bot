@@ -4,15 +4,17 @@ CHAT_ID -1001627830931
 
 //(var2)
 BOT_TOKEN 5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI
-CHAT_ID -515207049
+CHAT_ID -692251490
 
 
+//NB!: у меня в ТЕРМИНАЛЕ работает только вараинт №2, в ОДНУ СТРОКУ
+
+1)
 // Command in many lines (\ as separator)
-//NB!: ID without "-"! "515207049" , not "-515207049"
 curl -X POST \
      -H 'Content-Type: application/json' \
-     -d '{"chat_id": "515207049", "text": "This is a test from Olga Kos! (in Terminal in many lines)!"}' \
+     -d '{"chat_id": "-692251490", "text": "This is a test from Olga Kos! (in Terminal in many lines)!"}' \
      https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
-
+2)
 // Command in one line
-curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "515207049", "text": "This is a test from Olga Kos (in Terminal line)!"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-692251490", "text": "This is a test from Olga Kos (in Terminal line)!"}' https://api.telegram.org/bot5123841360:AAHgxLHLC_YizsDH-eZ0yoSbSEkbAnm41cI/sendMessage
